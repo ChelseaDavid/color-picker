@@ -24,6 +24,7 @@ function setColorPickerEventListeners(element, colors, pickerElements) {
 			setDisplayValues(red, green, blue)
 		});
 	}
+
 	/*
 		rgb.red.addEventListener('change', () => {
 			console.log("Red value: ", rgb.red.value);
@@ -37,21 +38,20 @@ function setColorPickerEventListeners(element, colors, pickerElements) {
 			console.log("Blue value: ", rgb.blue.value);
 			setBoxBGColor(colorBox, rgb.red.value, rgb.green.value, rgb.blue.value);
 		});*/
-}
-
-function setElementBGColor (bgElement, red, green, blue) {
-	rgbVal = [red, green, blue].join(' , ');
-	bgElement.style.backgroundColor = "rgb(" + rgbVal + ")";
-}
-
-function setDisplayValues (red, green, blue) {
-	let redVal = document.getElementById("redVal");
-	let greenVal = document.getElementById("greenVal");
-	let blueVal = document.getElementById("blueVal");
 
 
-	redVal.innerText = red;
-	greenVal.innerText = green;
-	blueVal.innerText = blue;
+	function setElementBGColor(bgElement, red, green, blue) {
+		rgbVal = [red, green, blue].join(' , ');
+		bgElement.style.backgroundColor = "rgb(" + rgbVal + ")";
+	}
 
+	function setDisplayValues(red, green, blue) {
+		let redVal = document.getElementById("redVal");
+		let greenVal = document.getElementById("greenVal");
+		let blueVal = document.getElementById("blueVal");
+
+		redVal.innerText = red;
+		greenVal.innerText = green;
+		blueVal.innerText = blue;
+	}
 }
